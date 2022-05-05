@@ -23,3 +23,25 @@ function summation(num) {
 
 console.log(summation(1), 1);
 console.log(summation(8), 36);
+
+
+
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+
+// P: Empty spaces? Special characters?
+// R: Returns each elt in arr squared and summed together.
+
+function squareSum(numbers){
+    if(numbers.length === 0){
+        return 0;
+    }
+    return numbers.map(elt => elt*elt).reduce((acc, currentValue) => currentValue + acc);
+}
+
+
+console.log(squareSum([1,2]), 5)
+console.log(squareSum([0, 3, 4, 5]), 50)
+console.log(squareSum([]), 0)
