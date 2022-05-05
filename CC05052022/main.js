@@ -45,3 +45,12 @@ function squareSum(numbers){
 console.log(squareSum([1,2]), 5)
 console.log(squareSum([0, 3, 4, 5]), 50)
 console.log(squareSum([]), 0)
+
+// Refactored function. Removed map.
+
+function squareSum(numbers){
+    if(numbers.length === 0){
+        return 0;
+    }
+    return numbers.reduce((acc, currentValue) => acc + currentValue * currentValue, 0);
+}
