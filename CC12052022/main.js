@@ -106,3 +106,18 @@ console.log(basicOp('+', 4, 7), 11);
 console.log(basicOp('-', 15, 18), -3);
 console.log(basicOp('*', 5, 5), 25);
 console.log(basicOp('/', 49, 7), 7);
+
+
+// #4
+
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+
+function greet(name){
+    return `Hello, ${name} how are you doing today?`
+  }
+
+
+console.log(greet("Ryan"), "Hello, Ryan how are you doing today?");
+console.log(greet("Shingles"), "Hello, Shingles how are you doing today?");
