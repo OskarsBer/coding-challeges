@@ -52,7 +52,13 @@ function century(year) {
     }else{
         result = year / 100 + 1;
     }
-    return Math.floor(result); // Math.floor instead of Math.round because of large nums
+    return Math.floor(result); 
+}
+
+// simple solution using Math.ceil
+
+function century(year) {
+    return Math.ceil(year/100)
 }
 
 
@@ -61,3 +67,4 @@ function century(year) {
   console.log(century(1601), 17, 'Testing for year 1601');
   console.log(century(2000), 20, 'Testing for year 2000');
   console.log(century(89), 1, 'Testing for year 89');
+
