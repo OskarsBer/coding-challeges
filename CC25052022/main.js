@@ -8,8 +8,8 @@
 
 
 
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-    return distanceToPump / (mpg * fuelLeft) <= 1 ? true : false;
+function zeroFuel(distanceToPump, mpg, fuelLeft) {
+    return distanceToPump <= mpg * fuelLeft;
 };
 
 
