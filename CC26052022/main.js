@@ -56,6 +56,7 @@ console.log(simpleMultiplication(6), 48);
 // ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
 
-function smash (words) {
-    return ""
-};
+const smash = words => words.join(' ');
+
+
+console.log(smash(['hello', 'world', 'this', 'is', 'great']));
