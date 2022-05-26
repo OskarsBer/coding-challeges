@@ -27,3 +27,17 @@ console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), "should 
 console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50), "should return False")
   
 console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), "should return False")
+
+
+// CC2
+
+
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+
+const simpleMultiplication = number => number % 2 === 0 ? number*8 : number*9;
+
+
+console.log(simpleMultiplication(2), 16);
+console.log(simpleMultiplication(3), 27);
+console.log(simpleMultiplication(6), 48);
