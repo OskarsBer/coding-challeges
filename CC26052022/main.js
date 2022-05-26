@@ -34,6 +34,9 @@ console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), "should ret
 
 // This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
+// P: Make function that takes in number. With modulo check if number is even or odd.
+// Arrow function returns true or false. Using ternary operator multiply number accordingly and return answer.  
+
 
 const simpleMultiplication = number => number % 2 === 0 ? number*8 : number*9;
 
@@ -41,3 +44,9 @@ const simpleMultiplication = number => number % 2 === 0 ? number*8 : number*9;
 console.log(simpleMultiplication(2), 16);
 console.log(simpleMultiplication(3), 27);
 console.log(simpleMultiplication(6), 48);
+
+
+// CC3
+
+
+
