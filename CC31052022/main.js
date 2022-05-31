@@ -93,19 +93,30 @@ class Kata {
 // 0 <= y <= 4
 
 
+// function points(games) {
+//     let totalPoints = 0;
+//     let arr = games.map(elt => elt.split(':'))
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i][0] > arr[i][1]){
+//             totalPoints += 3;
+//         }else if(arr[i][0] === arr[i][1]){
+//             totalPoints += 1;
+//         }
+//     }
+//     return totalPoints;
+// }
+
 function points(games) {
     let totalPoints = 0;
-    let arr = games.map(elt => elt.split(':'))
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i][0] > arr[i][1]){
-            totalPoints += 3;
-        }else if(arr[i][0] === arr[i][1]){
+    let arr = games.map(elt => {
+        if(elt[0] === elt[2]) {
             totalPoints += 1;
-        }
-    }
+        }else if(elt[0] > elt[2]) {
+            totalPoints += 3;
+        }        
+    });
     return totalPoints;
 }
-
 
 console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]) , 30)
 console.log(points(["1:1","2:2","3:3","4:4","2:2","3:3","4:4","3:3","4:4","4:4"]) , 10)
