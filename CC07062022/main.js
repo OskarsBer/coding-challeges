@@ -22,3 +22,22 @@ console.log(quarterOf(3), 1)
 console.log(quarterOf(8), 3)
 console.log(quarterOf(11), 4)
 console.log(quarterOf(0))
+
+
+// CC2
+
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+
+// function sumMix(x){
+//     return x.reduce((acc, c) => acc + Number(c), 0);
+// }
+
+const sumMix = x => x.reduce((acc, c) => acc + Number(c), 0);
+
+console.log(sumMix([1,"2","3"]), 6)
+console.log(sumMix(["0","2","3"]), 5)
+console.log(sumMix([3,"3",3]), 9)
