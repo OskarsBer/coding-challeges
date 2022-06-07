@@ -55,3 +55,23 @@ const removeExclamationMarks = s => s.split("!").join("");
 
 
 console.log(removeExclamationMarks("Hello World!"), "Hello World");
+
+
+// CC4
+
+// You are given two interior angles (in degrees) of a triangle.
+
+// Write a function to return the 3rd.
+
+// Note: only positive integers will be tested.
+
+// https://en.wikipedia.org/wiki/Triangle
+
+
+const otherAngle = (a, b) => 180-(a+b);
+
+
+console.log(otherAngle(20, 80), 80);
+console.log(otherAngle(40, 75), 65);
+console.log(otherAngle(45, 45), 90);
+console.log(otherAngle(70, 70), 40);
