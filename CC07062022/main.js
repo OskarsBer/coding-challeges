@@ -26,7 +26,6 @@ console.log(quarterOf(0))
 
 // CC2
 
-
 // Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 
 // Return your answer as a number.
@@ -41,3 +40,18 @@ const sumMix = x => x.reduce((acc, c) => acc + Number(c), 0);
 console.log(sumMix([1,"2","3"]), 6)
 console.log(sumMix(["0","2","3"]), 5)
 console.log(sumMix([3,"3",3]), 9)
+
+
+// CC3
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+
+// function removeExclamationMarks(s) {
+//     return s.split("!").join("");
+// }
+
+const removeExclamationMarks = s => s.split("!").join("");
+
+
+console.log(removeExclamationMarks("Hello World!"), "Hello World");
