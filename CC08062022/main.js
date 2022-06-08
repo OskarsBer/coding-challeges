@@ -13,18 +13,14 @@
 
 
 function sumArray(array) {
-    if(array !== null && array !== undefined && array.length >= 3) {
-        array.sort((a,b) => a - b);
-        array.pop();
-        array.shift();    
-
-        return array.reduce((acc, c) => acc + c, 0);    
-    }else{
+    if(!array || array.length < 3) { 
         return 0;
-    }        
-} 
+    }
 
-
+    return array.sort((a,b) => a-b)
+    .slice(1,-1)
+    .reduce((acc, c) => acc + c, 0);  
+}       
 
 
 console.log( sumArray(null)                     , 0 );
