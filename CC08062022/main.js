@@ -93,3 +93,7 @@ console.log(getGrade(95,90,93), 'A')
 console.log(getGrade(82,85,87), 'B')
 console.log(getGrade(75,70,79), 'C')
 console.log(getGrade(66,62,68), 'D')
+
+
+// CC4
+
