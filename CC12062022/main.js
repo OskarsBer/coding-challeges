@@ -107,3 +107,87 @@ console.log(removeEveryOther([[1, 2]]), [[1, 2]]);
 console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]),[['Goodbye']]);
 
 
+// CC5
+
+// Task
+// Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+// In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained
+// Consider an Example :
+// With the numbers are 1, 2 and 3 , here are some ways of placing signs and brackets:
+
+// 1 * (2 + 3) = 5
+// 1 * 2 * 3 = 6
+// 1 + 2 * 3 = 7
+// (1 + 2) * 3 = 9
+// So the maximum value that you can obtain is 9.
+
+// Notes
+// The numbers are always positive.
+// The numbers are in the range (1  ≤  a, b, c  ≤  10).
+// You can use the same operation more than once.
+// It's not necessary to place all the signs and brackets.
+// Repetition in numbers may occur .
+// You cannot swap the operands. For instance, in the given example you cannot get expression (1 + 3) * 2 = 8.
+
+
+// function expressionMatter(a, b, c) {
+//     let val1 = a*b*c;
+//     let val2 = a*(b+c);
+//     let val3 = (a+b)*c;
+//     let val4 = a+b*c;
+//     let val5 = a*b+c;
+//     let val6 = a+b+c;
+
+//     if(val1 > val2) {
+//         if(val1 >= val3) {
+//             return val1;
+//         }else if(val3 >= val4) {
+//             return val3;
+//         }else if(val4 >= val5) {
+//             return val4;
+//         }else if(val5 >= val6) {
+//             return val5;
+//         }else{
+//             return val6;
+//         }        
+//     }else if(val1 <= val2) {
+//         if(val2 > val3) {
+//             return val2;
+//         }else if(val3 > val4) {
+//             return val3;
+//         }else if(val4 > val5) {
+//             return val4;
+//         }else if(val5 > val6) {
+//             return val5;
+//         }else{
+//             return val6;
+//         }
+//     }
+// }
+
+// lol
+
+const expressionMatter = (a, b, c) => Math.max(a+b+c, a*b*c, (a+b)*c, a*(b+c));
+
+
+console.log(expressionMatter(2, 1, 2), 6);
+console.log(expressionMatter(2, 1, 1), 4);
+console.log(expressionMatter(1, 1, 1), 3);
+console.log(expressionMatter(1, 2, 3), 9);
+console.log(expressionMatter(1, 3, 1), 5);
+console.log(expressionMatter(2, 2, 2), 8);
+
+console.log(expressionMatter(5, 1, 3), 20);
+console.log(expressionMatter(3, 5, 7), 105);
+console.log(expressionMatter(5, 6, 1), 35);
+console.log(expressionMatter(1, 6, 1), 8);
+console.log(expressionMatter(2, 6, 1), 14);
+console.log(expressionMatter(6, 7, 1), 48);
+
+console.log(expressionMatter(2, 10, 3), 60);
+console.log(expressionMatter(1, 8, 3), 27);
+console.log(expressionMatter(9, 7, 2), 126);
+console.log(expressionMatter(1, 1, 10), 20);
+console.log(expressionMatter(9, 1, 1), 18);
+console.log(expressionMatter(10, 5, 6), 300);
+console.log(expressionMatter(1, 10, 1), 12);
