@@ -35,3 +35,12 @@ String.prototype.toAlternatingCase = function () {
     console.log("1a2b3c4d5e".toAlternatingCase(), "1A2B3C4D5E");
     console.log("String.prototype.toAlternatingCase".toAlternatingCase(), "sTRING.PROTOTYPE.TOaLTERNATINGcASE");
     console.log("Hello World".toAlternatingCase().toAlternatingCase(), "Hello World");
+
+
+// CC2
+
+// Now you have to write a function that takes an argument and returns the square of it.
+
+const square = number => number**2;
+
+console.log(square(3), 9);
