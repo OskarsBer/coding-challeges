@@ -9,11 +9,35 @@ function getFileExtension(file) {
 console.log(getFileExtension('script.js'))
 
 
-//2 Write a Js program to create a new string without the first and last character of a given string.
+//2 Write function to create a new string without the first and last character of a given string.
 
-//3 Write a Js program to reverse a given string.
+function removeFirstAndLastChar(str) {
+    return str.slice(1,-1);
+}
 
-//4 Write a Js program to convert the lattrs of a given string in alphabetical order.
+console.log(removeFirstAndLastChar('Hello world'))
+console.log(removeFirstAndLastChar('Yo'))
+
+
+//3 Write function to reverse a given string.
+
+// function reverseStr(str) {
+//     return str.split('').reverse().join('');
+// }
+
+function reverseStr(str) {
+    let result = '';
+    for(let i = str.length - 1; i >= 0; i--) {
+        result += str[i]
+    }
+    return result;
+}
+
+console.log(reverseStr('I love javascript'))
+
+
+//4 Write function to sort the letters of a given string in alphabetical order.
+
 
 //5 whrite a js program to check two given nummbers and 
 //return true if one of the number is 50 or if their sum is 50.
