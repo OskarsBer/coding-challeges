@@ -44,8 +44,23 @@ function sortLetters(str) {
 
 console.log(sortLetters('asdfghjklzxcvbnmasdfghjkl'))
 
-//5 whrite a js program to check two given nummbers and 
-//return true if one of the number is 50 or if their sum is 50.
+//5 Write function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+
+// function testNums(num1, num2) {
+//     if(num1 >= 50 || num2 >= 50 || num1 + num2 === 50) {
+//         return true;
+//     }else{
+//         return false;
+//     }
+
+// }
+
+const testNums = (num1, num2) => num1 >= 50 || num2 >= 50 || num1 + num2 === 50;
+
+console.log(testNums(50, 2));
+console.log(testNums(25, 25));
+console.log(testNums(10, 20));
+console.log(testNums(30, 30));
 
 // 6 whrite a js program to complite the sum of
 // three elements of a given array of integers of length 3.
