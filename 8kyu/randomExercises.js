@@ -73,8 +73,22 @@ console.log(sumElements([1,2,3]));//6
 console.log(sumElements([10,20,3]));//33
 console.log(sumElements([-1,-2,-3]));//-6
 
-//7 whrite a js program to compute the sum of the two given integers. 
-//If the two values are same, then returns triple their sum.
+
+//7 Write function to sum of 2 given integers. If 2 values are same, then returns triple their sum.
+
+// function sumTwoIntegers(num1, num2) {
+//     if(num1 === num2) {
+//         return (num1 + num2) * 3;
+//     }else{
+//         return num1 + num2;
+//     }
+// }
+
+const sumTwoIntegers = (num1, num2) => num1 === num2 ? (num1 + num2) * 3 : num1 + num2;
+
+console.log(sumTwoIntegers(1,2));//3
+console.log(sumTwoIntegers(2,2));//12
+
 
 //8 Write a js program to create a newqrry taking the first and last element
 // from a given arry of integers and length must be greater or equal to 1.
