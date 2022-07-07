@@ -47,7 +47,7 @@ console.log(sortLetters('asdfghjklzxcvbnmasdfghjkl'))
 //5 Write function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 
 // function testNums(num1, num2) {
-//     if(num1 >= 50 || num2 >= 50 || num1 + num2 === 50) {
+//     if(num1 === 50 || num2 === 50 || num1 + num2 === 50) {
 //         return true;
 //     }else{
 //         return false;
@@ -55,15 +55,23 @@ console.log(sortLetters('asdfghjklzxcvbnmasdfghjkl'))
 
 // }
 
-const testNums = (num1, num2) => num1 >= 50 || num2 >= 50 || num1 + num2 === 50;
+const testNums = (num1, num2) => num1 === 50 || num2 === 50 || num1 + num2 === 50;
 
 console.log(testNums(50, 2));
 console.log(testNums(25, 25));
 console.log(testNums(10, 20));
 console.log(testNums(30, 30));
 
-// 6 whrite a js program to complite the sum of
-// three elements of a given array of integers of length 3.
+
+// 6 Write function to sum of three elements of a given array of integers of length 3.
+
+function sumElements(arr) {
+    return arr.reduce((acc, c) => acc + c, 0);
+}
+
+console.log(sumElements([1,2,3]));//6
+console.log(sumElements([10,20,3]));//33
+console.log(sumElements([-1,-2,-3]));//-6
 
 //7 whrite a js program to compute the sum of the two given integers. 
 //If the two values are same, then returns triple their sum.
