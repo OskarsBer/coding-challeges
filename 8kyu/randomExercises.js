@@ -38,6 +38,11 @@ console.log(reverseStr('I love javascript'))
 
 //4 Write function to sort the letters of a given string in alphabetical order.
 
+function sortLetters(str) {
+    return str.split('').sort().join('');
+}
+
+console.log(sortLetters('asdfghjklzxcvbnmasdfghjkl'))
 
 //5 whrite a js program to check two given nummbers and 
 //return true if one of the number is 50 or if their sum is 50.
