@@ -90,7 +90,22 @@ console.log(sumTwoIntegers(1,2));//3
 console.log(sumTwoIntegers(2,2));//12
 
 
-//8 Write a js program to create a newqrry taking the first and last element
-// from a given arry of integers and length must be greater or equal to 1.
+//8 Write function to create a new query - taking the first and the last element
+// from a given arr of integers and length must be greater or equal to 1.
+
+function newQuery(arr) {
+    let newArr = [];
+    
+    if(arr.length < 1) {
+        return "Array too short!";
+    }else{
+        newArr.push(arr[0]);
+        newArr.push(arr[arr.length-1]);
+    }
+    return newArr;
+}
+
+console.log(newQuery([1,2,3,4,5,6]));//[1,6]
+console.log(newQuery([]));//Array too short
 
 //9 Write a js program to find the number of elements which presents in both of the given arrays.
