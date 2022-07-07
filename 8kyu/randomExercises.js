@@ -108,4 +108,26 @@ function newQuery(arr) {
 console.log(newQuery([1,2,3,4,5,6]));//[1,6]
 console.log(newQuery([]));//Array too short
 
-//9 Write a js program to find the number of elements which presents in both of the given arrays.
+
+//9 Write function to find the number of elements which presents in both of the given arrays.
+
+function arrElementCount(arr1, arr2) {
+    let arr1Count = 0;
+    let arr2Count = 0;
+
+    for(let i = 0; i < arr1.length; i++) {
+        arr1Count++;       
+    }
+
+    for(let i = 0; i < arr2.length; i++) {
+        arr2Count++;
+    } 
+
+    return arr1Count + arr2Count;
+}
+
+console.log(arrElementCount([1,2,3],[1,2,3,4,5,6]));//9
+console.log(arrElementCount([1,2,3,4,5,6],[1,2,3,4,5,6]));//12
+console.log(arrElementCount([1],[1]));//2
+console.log(arrElementCount([],[1]));//1
+console.log(arrElementCount([],[]));//0
