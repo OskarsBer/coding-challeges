@@ -3,16 +3,15 @@
 
 function highAndLow(numbers){
     let newArr = numbers.split(' ');
-    let min = numbers[0];
-    let max = numbers[0];
+    let min = newArr[0];
+    let max = newArr[0];
 
     for(let i = 0; i < newArr.length; i++) {
-      if(newArr[i] < min) {
+      if(Number(newArr[i]) < min) {
+        console.log(newArr[i])
         min = newArr[i];
       }
-    }
-    for(let i = 0; i < newArr.length; i++) {
-      if(newArr[i] > max) {
+      if(Number(newArr[i]) > max) {
         max = newArr[i];
       }
     }
