@@ -4,15 +4,28 @@
 // 999 => 9 + 9 + 9 = 27 => 2 + 7 => 9
 
 function digitalRoot(n) {
-  let sum = n;
-  let sumLength = sum.toString().split('').length;
-
-  while (sumLength > 1) {
-      sum = sum.toString().split('').reduce((acc, cur) => acc + (+cur), 0);
-      sumLength = sum.toString().split('').length;
+  let result = n;
+  
+  if (result < 10) {
+    return result;
   }
-    return sum;
+
+  while (result > 9) {
+      result = result.toString().split('').reduce((acc, cur) => acc + Number(cur), 0);
+  }
+  return result;
 }
 
-console.log( digitalRoot(16))//7
+// function digitalRoot(n) {
+//   let sum = n;
+//   let sumLength = sum.toString().split('').length;
+
+//   while (sumLength > 1) {
+//       sum = sum.toString().split('').reduce((acc, cur) => acc + (+cur), 0);
+//       sumLength = sum.toString().split('').length;
+//   }
+//     return sum;
+// }
+
+console.log( digitalRoot(16))// 7
 console.log( digitalRoot(456))// 6
